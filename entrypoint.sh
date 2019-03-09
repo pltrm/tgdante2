@@ -13,12 +13,6 @@ if [ x"${WORKERS}" = "x" ]; then
 fi
 
 CFGFILE="/conf/dante.conf"
-if [ x"${IP6}" = "x" ]; then
-        IP6=`ip -6 r | grep '^default' || echo ""`
-        if [ x"${IP6}" != "x" ]; then
-                CFGFILE="/conf/dante6.conf"
-        fi
-fi
 
 if [ x"${INTERFACE}" = "x" ]; then
         INTERFACE=`ip  r | grep '^default' | grep -o 'dev[ ]*[^ ]*' | grep -o '[^ ]*$' || echo ""`

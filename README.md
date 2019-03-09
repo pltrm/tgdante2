@@ -1,25 +1,8 @@
-Dockerized Dante socks5 proxy for telegram. Alpine version
-==========================================================
-
 Features
 --------
-* Docker, Docker Compose
 * User management scripts
 * Only telegram usage restrictions
 * Try to autodetect interface and IPv6 support
-
-Requirements
-------------
-
-* [Docker](https://www.docker.com/docker-community) for virtual containers
-* [Docker Compose](https://docs.docker.com/compose/) - a tool for defining and running multi-container Docker applications
-
-For nuts
---------
-
-* PayPal https://www.paypal.me/schors
-* Yandex.Money http://yasobe.ru/na/schors
-* BTC:17V94QS4vaBwec1Qwqp2ow5b3tbrRGGcne
 
 Very simple usage
 -----------------
@@ -47,6 +30,7 @@ docker run --rm -ti -v $PWD/etc:/etc --net=host schors/tgdante2 /scripts/del use
 # another method (via docker exec)
 docker exec -ti tgdante /scripts/add user2 secret3
 ```
+
 Please note that `-v $PWD/etc` is necessary for persistent user database
 
 Access test
@@ -65,15 +49,21 @@ Environment variables
 * WORKERS - preforked workers. Default: 10
 * IP6 - something, if needed. Default: autodetect
 
+For nuts
+--------
+
+* PayPal https://www.paypal.me/schors
+* Yandex.Money http://yasobe.ru/na/schors
+* BTC:17V94QS4vaBwec1Qwqp2ow5b3tbrRGGcne
+
 Links
 -----
 
 * [Telegram](https://telegram.org/)  Messenger
 * [Dante](https://www.inet.no/dante/index.html) A free SOCKS server
-
 * [Restless Phil](https://2018.schors.spb.ru) Restless Phil (tm)
 * [Roscomnadzor](http://rkn.gov.ru) The Federal Service for Supervision of Communications, Information Technology, and Mass Media
 
 
 ---
-[![UNLICENSE](noc.png)](UNLICENSE)
+[![UNLICENSE](https://github.com/schors/tgdante2/raw/master/noc.png)](https://raw.githubusercontent.com/schors/tgdante2/master/UNLICENSE)
